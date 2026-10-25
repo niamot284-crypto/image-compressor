@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ছবি ছোট করুন — ফ্রি অনলাইন ইমেজ কমপ্রেসর</title>
+  <meta name="description" content="বিনামূল্যে JPG, PNG ও WebP ছবির সাইজ কমান। একসঙ্গে একাধিক ছবি কমপ্রেস ও ডাউনলোড করুন। সব কাজ আপনার ব্রাউজারেই, কোনো আপলোড ছাড়াই।">
+  <meta name="theme-color" content="#146c52">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header wrap"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▧</span> ছবি ছোট করুন<span class="brand-dot">.</span></a><span class="header-note">সহজ। ফ্রি। ব্যক্তিগত।</span></header>
+  <main class="wrap">
+    <div id="ad-top"></div>
+    <section class="intro">
+      <p class="eyebrow"><span></span> আপনার ছবির হালকা সংস্করণ</p>
+      <h1>ছবির সাইজ কমান,<br><span>মুহূর্তেই।</span></h1>
+      <p class="lead">বড় ছবি, ছোট ফাইল। মান পছন্দ করুন, ছবি কমপ্রেস করুন,<br class="desktop-break"> আর ডাউনলোড করুন — একদম বিনামূল্যে।</p>
+      <div class="trust"><span>✓ কোনো আপলোড নেই</span><span>✓ কোনো সাইনআপ নেই</span><span>✓ ব্রাউজারেই সব কাজ</span></div>
+    </section>
+    <section class="tool" aria-label="ইমেজ কমপ্রেসর">
+      <label class="drop-zone" id="drop-zone" for="file-input">
+        <span class="upload-icon" aria-hidden="true">↥</span>
+        <strong>এখানে ছবি ছেড়ে দিন</strong>
+        <span class="drop-sub">অথবা ক্লিক করে একসঙ্গে একাধিক ছবি বেছে নিন</span>
+        <span class="choose-button">ছবি নির্বাচন করুন <span aria-hidden="true">＋</span></span>
+        <span class="formats">JPG · PNG · WebP</span>
+        <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" multiple>
+      </label>
+      <div class="settings">
+        <div class="quality-heading"><label for="quality">ছবির মান</label><output id="quality-value" for="quality">৮০%</output></div>
+        <input id="quality" type="range" min="10" max="100" value="80">
+        <div class="range-labels"><span>ছোট ফাইল</span><span>উন্নত মান</span></div>
+        <p class="setting-note">মান বদলালে নির্বাচিত ছবিগুলো আবার কমপ্রেস হবে। PNG ছবি ছোট করতে WebP-তে রূপান্তর করা হয়।</p>
+      </div>
+      <div class="privacy"><span aria-hidden="true">◈</span><p><strong>আপনার ছবি, আপনার কাছেই।</strong> কোনো ছবি সার্ভারে পাঠানো হয় না। সব প্রক্রিয়া আপনার ডিভাইসেই হয়।</p></div>
+    </section>
+    <section id="results-section" class="results" aria-labelledby="results-title" hidden>
+      <div class="results-heading"><div><h2 id="results-title">আপনার ছবিগুলো</h2><p id="summary" role="status" aria-live="polite"></p></div><button id="download-all" class="primary" disabled>সব ডাউনলোড করুন ↓</button></div>
+      <p class="download-note">সব ডাউনলোড করলে প্রতিটি ছবি আলাদা ফাইল হিসেবে সেভ হবে। ব্রাউজারে একাধিক ডাউনলোডের অনুমতি লাগতে পারে।</p>
+      <div id="results"></div>
+    </section>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section class="how-to"><p class="eyebrow">শুরু করতে মাত্র তিন ধাপ</p><h2>কীভাবে ছবি কমপ্রেস করবেন?</h2><div class="steps"><article><span>০১</span><h3>ছবি বেছে নিন</h3><p>আপনার ডিভাইস থেকে এক বা একাধিক JPG, PNG কিংবা WebP ছবি নির্বাচন করুন।</p></article><article><span>০২</span><h3>মান ঠিক করুন</h3><p>স্লাইডার দিয়ে ছবির মান ঠিক করুন। প্রতিটি ছবির আগের ও পরের সাইজ এবং কত শতাংশ সাশ্রয় হলো দেখুন।</p></article><article><span>০৩</span><h3>ডাউনলোড করুন</h3><p>পছন্দমতো প্রতিটি ছবি আলাদাভাবে অথবা সব ছবি একসঙ্গে ডাউনলোড করুন।</p></article></div><p class="explanation">এই ফ্রি ইমেজ কমপ্রেসর ব্রাউজারের canvas ব্যবহার করে ছবির ফাইল ছোট করে। ছবির দৈর্ঘ্য ও প্রস্থ একই থাকে। ছবির ধরন ও মান অনুযায়ী সাশ্রয়ের পরিমাণ বদলায়; নতুন ফাইল বড় হলে মূল ছবিটিই রাখা হয়।</p></section>
+    <div id="ad-bottom"></div>
+  </main>
+  <footer class="wrap"><span class="brand">ছবি ছোট করুন.</span><p>কম সাইজ। সহজ শেয়ারিং। সবসময় ফ্রি।</p></footer>
+</body>
+</html>
