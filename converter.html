@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ছবির ফরম্যাট বদলান — ফ্রি PNG JPG WebP কনভার্টার</title>
+  <meta name="description" content="একসঙ্গে একাধিক ছবি PNG, JPG বা WebP ফরম্যাটে রূপান্তর করুন। ব্রাউজারেই কাজ হয়, কোনো ছবি আপলোড হয় না।">
+  <meta name="theme-color" content="#146c52">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="converter.css">
+  <script src="converter.js" defer></script>
+</head>
+<body>
+  <header class="header wrap"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▧</span> ছবি ছোট করুন<span class="brand-dot">.</span></a><nav class="header-nav" aria-label="টুল নির্বাচন"><a href="./">কমপ্রেসর</a><a href="resizer.html">রিসাইজার</a><a href="converter.html" aria-current="page">কনভার্টার</a><a href="qr.html">QR কোড</a><a href="wordcount.html">শব্দ গণনা</a></nav></header>
+  <main class="wrap">
+    <div id="ad-top"></div>
+    <section class="intro"><p class="eyebrow"><span></span> ছবির নতুন ফরম্যাট</p><h1>PNG, JPG বা WebP —<br><span>যেটি দরকার।</span></h1><p class="lead">একসঙ্গে অনেক ছবির ফরম্যাট বদলান।<br class="desktop-break"> আপনার ছবি আপনার ব্রাউজারেই থাকে।</p><div class="trust"><span>✓ কোনো আপলোড নেই</span><span>✓ কোনো সাইনআপ নেই</span><span>✓ ব্রাউজারেই সব কাজ</span></div></section>
+    <section class="tool" aria-label="ইমেজ ফরম্যাট কনভার্টার">
+      <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-icon" aria-hidden="true">↥</span><strong>এখানে ছবি ছেড়ে দিন</strong><span class="drop-sub">অথবা ক্লিক করে একসঙ্গে একাধিক ছবি বেছে নিন</span><span class="choose-button">ছবি নির্বাচন করুন <span aria-hidden="true">＋</span></span><span class="formats">JPG · PNG · WebP</span><input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" multiple></label>
+      <div class="settings converter-settings"><label for="format">নতুন ফরম্যাট</label><select id="format"><option value="image/png">PNG</option><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option></select><p class="setting-note">JPG-তে স্বচ্ছ অংশ সাদা হবে। ফরম্যাট বদলালে ফাইলের সাইজ কমতেও পারে, বাড়তেও পারে।</p><button id="convert-button" class="primary" disabled>ফরম্যাট বদলান ↓</button></div>
+      <div class="privacy"><span aria-hidden="true">◈</span><p><strong>আপনার ছবি, আপনার কাছেই।</strong> কোনো ছবি সার্ভারে পাঠানো হয় না। সব প্রক্রিয়া আপনার ডিভাইসেই হয়।</p></div>
+    </section>
+    <section id="results-section" class="results" aria-labelledby="results-title" hidden><div class="results-heading"><div><h2 id="results-title">রূপান্তর করা ছবিগুলো</h2><p id="summary" role="status" aria-live="polite"></p></div><button id="download-all" class="primary" disabled>সব ডাউনলোড করুন ↓</button></div><p class="download-note">সব ডাউনলোড করলে প্রতিটি ছবি আলাদা ফাইল হিসেবে সেভ হবে। ব্রাউজারে একাধিক ডাউনলোডের অনুমতি লাগতে পারে।</p><div id="results"></div></section>
+    <p id="message" role="status" aria-live="polite"></p>
+    <section class="how-to"><p class="eyebrow">মাত্র তিন ধাপ</p><h2>কীভাবে ফরম্যাট বদলাবেন?</h2><div class="steps"><article><span>০১</span><h3>ছবি বেছে নিন</h3><p>JPG, PNG বা WebP ছবি নির্বাচন করুন। একসঙ্গে একাধিক ছবিও নিতে পারেন।</p></article><article><span>০২</span><h3>ফরম্যাট ঠিক করুন</h3><p>PNG, JPG বা WebP থেকে আউটপুট ফরম্যাট বেছে নিয়ে বোতামে চাপুন।</p></article><article><span>০৩</span><h3>ডাউনলোড করুন</h3><p>প্রতিটি ছবি আলাদা করে অথবা সব ছবি একসঙ্গে ডাউনলোড করুন।</p></article></div><p class="explanation">এই কনভার্টার ব্রাউজারের canvas ব্যবহার করে ছবির ফরম্যাট বদলায়। রূপান্তরের সময় ছবির পিক্সেল মাপ একই রাখা হয়।</p></section>
+    <div id="ad-bottom"></div>
+  </main>
+  <footer class="wrap"><span class="brand">ছবি ছোট করুন.</span><p>কম সাইজ। সহজ শেয়ারিং। সবসময় ফ্রি।</p></footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR কোড তৈরি করুন — ফ্রি অনলাইন QR জেনারেটর</title>
+  <meta name="description" content="বাংলা লেখা বা URL থেকে বিনামূল্যে QR কোড তৈরি করুন। আকার বেছে PNG ডাউনলোড করুন। সব কাজ ব্রাউজারেই হয়।">
+  <meta name="theme-color" content="#146c52">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="qr.css">
+  <script src="qr.js" defer></script>
+</head>
+<body>
+  <header class="header wrap"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▧</span> ছবি ছোট করুন<span class="brand-dot">.</span></a><nav class="header-nav" aria-label="টুল নির্বাচন"><a href="./">কমপ্রেসর</a><a href="resizer.html">রিসাইজার</a><a href="converter.html">কনভার্টার</a><a href="qr.html" aria-current="page">QR কোড</a><a href="wordcount.html">শব্দ গণনা</a></nav></header>
+  <main class="wrap">
+    <div id="ad-top"></div>
+    <section class="intro"><p class="eyebrow"><span></span> লেখা থেকে স্ক্যানযোগ্য কোড</p><h1>আপনার QR কোড,<br><span>এক ক্লিকেই।</span></h1><p class="lead">লেখা বা ওয়েব লিংক দিন। আকার বেছে PNG ছবি হিসেবে সেভ করুন।</p><div class="trust"><span>✓ কোনো আপলোড নেই</span><span>✓ কোনো সাইনআপ নেই</span><span>✓ ব্রাউজারেই সব কাজ</span></div></section>
+    <section class="tool qr-tool" aria-label="QR কোড জেনারেটর">
+      <div class="qr-form"><label for="qr-text">লেখা বা URL</label><textarea id="qr-text" rows="5" maxlength="1200" placeholder="এখানে লেখা বা https:// দিয়ে লিংক লিখুন"></textarea><div class="qr-field"><label for="qr-size">ছবির আকার</label><select id="qr-size"><option value="256">২৫৬ × ২৫৬ পিক্সেল</option><option value="512" selected>৫১২ × ৫১২ পিক্সেল</option><option value="1024">১০২৪ × ১০২৪ পিক্সেল</option></select></div><p class="setting-note">বাংলা লেখাও ব্যবহার করতে পারেন। সর্বোচ্চ ২৭১ UTF-8 বাইট পর্যন্ত QR কোড তৈরি হবে।</p><p id="qr-error" class="qr-error" role="alert" hidden></p><button id="generate-button" class="primary">QR কোড তৈরি করুন</button></div>
+      <div id="qr-result" class="qr-result" hidden><h2>আপনার QR কোড</h2><canvas id="qr-canvas" role="img" aria-label="তৈরি করা QR কোড"></canvas><p class="setting-note">ব্যবহারের আগে ফোনের ক্যামেরা দিয়ে স্ক্যান করে দেখে নিন।</p><button id="download-button" class="primary">PNG ডাউনলোড করুন ↓</button></div>
+      <div class="privacy"><span aria-hidden="true">◈</span><p><strong>আপনার লেখা, আপনার কাছেই।</strong> QR কোড এই পেজেই তৈরি হয়; লেখা কোথাও পাঠানো হয় না।</p></div>
+    </section>
+    <section class="how-to"><p class="eyebrow">মাত্র তিন ধাপ</p><h2>কীভাবে QR কোড বানাবেন?</h2><div class="steps"><article><span>০১</span><h3>লেখা দিন</h3><p>যে লেখা বা URL QR কোডে রাখতে চান, সেটি লিখুন।</p></article><article><span>০২</span><h3>আকার বেছে নিন</h3><p>ডাউনলোডের জন্য পছন্দের PNG ছবির আকার নির্বাচন করুন।</p></article><article><span>০৩</span><h3>তৈরি ও ডাউনলোড</h3><p>QR কোড তৈরি করে PNG ফাইলটি আপনার ডিভাইসে সেভ করুন।</p></article></div><p class="explanation">QR কোডে আপনার লেখাটি UTF-8 বাইট হিসেবে রাখা হয়। ছবিটি তৈরি করতে এই পেজ ব্রাউজারের canvas ব্যবহার করে।</p></section>
+    <div id="ad-bottom"></div>
+  </main>
+  <footer class="wrap"><span class="brand">ছবি ছোট করুন.</span><p>কম সাইজ। সহজ শেয়ারিং। সবসময় ফ্রি।</p></footer>
+</body>
+</html>

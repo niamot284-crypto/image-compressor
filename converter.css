@@ -1,0 +1,2 @@
+@charset "UTF-8";
+.converter-settings{display:flex;align-items:flex-start;flex-direction:column;gap:9px}.converter-settings>label{font-size:14px;font-weight:650}.converter-settings select{min-width:200px;border:1px solid #cdddcf;border-radius:8px;background:#fff;color:#19382e;font:inherit;font-size:15px;padding:9px 12px}.converter-settings select:focus{outline:3px solid #89b69f;outline-offset:2px}.converter-settings .setting-note{margin:2px 0 6px}.result .saved{display:block}@media(max-width:600px){.converter-settings select,.converter-settings .primary{width:100%}}
