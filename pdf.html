@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ছবি থেকে PDF বানান — ফ্রি অনলাইন ইমেজ টু PDF</title>
+  <meta name="description" content="একাধিক JPG, PNG ও WebP ছবি দিয়ে একটি PDF বানান। ছবি সাজান, ঘোরান, পেজ সাইজ ও মার্জিন ঠিক করুন। সব কাজ ব্রাউজারেই হয়।">
+  <meta name="theme-color" content="#146c52">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pdf.css">
+  <script src="pdf.js" defer></script>
+</head>
+<body>
+  <header class="header wrap"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▧</span> ছবি ছোট করুন<span class="brand-dot">.</span></a><nav class="header-nav" aria-label="টুল নির্বাচন"><a href="./">কমপ্রেসর</a><a href="resizer.html">রিসাইজার</a><a href="converter.html">কনভার্টার</a><a href="pdf.html" aria-current="page">PDF বানান</a><a href="qr.html">QR কোড</a><a href="wordcount.html">শব্দ গণনা</a></nav></header>
+  <main class="wrap">
+    <div id="ad-top"></div>
+    <section class="intro"><p class="eyebrow"><span></span> ছবিগুলো এক ফাইলে</p><h1>ছবি থেকে PDF,<br><span>মুহূর্তেই।</span></h1><p class="lead">ছবি সাজান, ঘোরান, পেজের মাপ ঠিক করুন,<br class="desktop-break"> তারপর এক ক্লিকে PDF ডাউনলোড করুন।</p><div class="trust"><span>✓ কোনো আপলোড নেই</span><span>✓ কোনো সাইনআপ নেই</span><span>✓ ব্রাউজারেই সব কাজ</span></div></section>
+    <section class="tool pdf-tool" aria-label="ইমেজ থেকে PDF">
+      <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-icon" aria-hidden="true">↥</span><strong>এখানে ছবি ছেড়ে দিন</strong><span class="drop-sub">অথবা ক্লিক করে একসঙ্গে একাধিক ছবি বেছে নিন</span><span class="choose-button">ছবি নির্বাচন করুন <span aria-hidden="true">＋</span></span><span class="formats">JPG · PNG · WebP</span><input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" multiple></label>
+      <fieldset class="pdf-options"><legend>PDF-এর পেজ</legend><div class="option-grid"><label for="page-size">পেজ সাইজ<select id="page-size"><option value="a4">A4</option><option value="letter">Letter</option><option value="image">ছবির মাপে</option></select></label><label for="orientation">দিক<select id="orientation"><option value="portrait">লম্বালম্বি</option><option value="landscape">আড়াআড়ি</option></select></label><label for="margin">মার্জিন (মিমি)<input id="margin" type="number" min="0" max="50" step="1" value="10" inputmode="numeric"></label></div><p class="setting-note">‘ছবির মাপে’ বেছে নিলে প্রতিটি পেজ ছবির অনুপাত ধরে তৈরি হবে।</p></fieldset>
+      <div id="file-list" class="pdf-list" aria-live="polite"></div>
+      <p id="message" role="status" aria-live="polite"></p>
+      <button id="create-pdf" class="primary create-pdf" disabled>PDF তৈরি ও ডাউনলোড করুন ↓</button>
+      <div class="privacy"><span aria-hidden="true">◈</span><p><strong>আপনার ছবি, আপনার কাছেই।</strong> কোনো ছবি সার্ভারে পাঠানো হয় না। PDF আপনার ব্রাউজারেই তৈরি হয়।</p></div>
+    </section>
+    <section class="how-to"><p class="eyebrow">মাত্র তিন ধাপ</p><h2>কীভাবে PDF বানাবেন?</h2><div class="steps"><article><span>০১</span><h3>ছবি বেছে নিন</h3><p>JPG, PNG বা WebP ছবি নির্বাচন করুন। চাইলে একসঙ্গে অনেক ছবি নিতে পারেন।</p></article><article><span>০২</span><h3>সাজান ও ঠিক করুন</h3><p>তীর বোতাম দিয়ে ছবির ক্রম বদলান, প্রয়োজন হলে ঘোরান বা বাদ দিন। পেজের সাইজ, মার্জিন ও দিক ঠিক করুন।</p></article><article><span>০৩</span><h3>PDF ডাউনলোড করুন</h3><p>একটি PDF ফাইলে প্রতিটি ছবি আলাদা পেজে নিয়ে ডাউনলোড করুন।</p></article></div><p class="explanation">এই টুল ছবিগুলোকে JPEG ডেটা হিসেবে PDF-এর ভেতরে রাখে। স্বচ্ছ ছবির পটভূমি সাদা হবে এবং ছবি মেটাডেটা রাখা হয় না।</p></section>
+    <div id="ad-bottom"></div>
+  </main>
+  <footer class="wrap"><span class="brand">ছবি ছোট করুন.</span><p>কম সাইজ। সহজ শেয়ারিং। সবসময় ফ্রি।</p></footer>
+</body>
+</html>
