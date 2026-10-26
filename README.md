@@ -1,10 +1,10 @@
 # ছবি ছোট করুন
 
-A free, Bengali, mobile-friendly static image compressor. Built with HTML, CSS and vanilla JavaScript, without dependencies, accounts, APIs or a backend.
+A free, Bengali, mobile-friendly static image compressor and resizer. Built with HTML, CSS and vanilla JavaScript, without dependencies, accounts, APIs or a backend.
 
 ## Run
 
-Open `index.html` in a modern browser. No install or build step is needed. To publish, place `index.html`, `style.css` and `script.js` together on any static host, such as GitHub Pages, Cloudflare Pages or Netlify.
+Open `index.html` for the compressor or `resizer.html` for the resizer in a modern browser. No install or build step is needed. To publish, place the HTML, CSS and JavaScript files together on any static host, such as GitHub Pages, Cloudflare Pages or Netlify.
 
 ## Features
 
@@ -14,10 +14,13 @@ Open `index.html` in a modern browser. No install or build step is needed. To pu
 - Individual downloads and download all as separate files. Your browser may ask permission for multiple downloads.
 - Bengali interface and instructions, responsive layout, page title and meta description.
 - Empty `ad-top` and `ad-bottom` divs reserved for future ads.
+- Resizer supports exact pixel dimensions with optional aspect ratio lock, or a percentage of each image's original size. It shows input and output dimensions and file sizes for every image.
 
 ## Processing and privacy
 
 All image decoding and compression happen locally using browser Canvas and `toBlob`. No images are uploaded, and the site makes no network requests or loads external fonts, scripts or analytics. It also works offline after the files are available locally. Adding future ads or third-party code could change this privacy behavior.
+
+The resizer also uses Canvas locally. It preserves the input format when the browser supports encoding it. Each image keeps its own aspect ratio when the lock is enabled; the last edited dimension controls the scale. Resized output may be larger than the original file. To limit device memory use, output is capped at 16,384 pixels per side and 40 million pixels overall. Canvas re-encoding can remove metadata and animation.
 
 JPEG inputs are encoded as JPEG. PNG and WebP inputs are encoded as WebP to support lossy quality adjustment and transparency. Browsers without WebP encoding may return PNG instead; downloads use the actual output MIME type. The original file is retained when the encoded version is no smaller. Image dimensions are preserved. Quality is an encoder setting, not a promised size reduction; actual results vary. Canvas re-encoding does not preserve original metadata or animation.
 
