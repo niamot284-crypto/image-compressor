@@ -1,6 +1,6 @@
 # ছবি ছোট করুন
 
-A free, Bengali, mobile-friendly static site with six tools: image compressor, image resizer, image format converter, image-to-PDF converter, QR code generator, and word and character counter. Built with HTML, CSS and vanilla JavaScript, without dependencies, accounts, APIs or a backend.
+A free, Bengali, mobile-friendly static site with seven tools: image compressor, image resizer, image format converter, image-to-PDF converter, browser-based PDF editor, QR code generator, and word and character counter. Built with HTML, CSS and vanilla JavaScript, without dependencies, accounts, APIs or a backend.
 
 ## Run
 
@@ -17,6 +17,7 @@ Open `index.html` in a modern browser and use the navigation menu for the other 
 - Resizer supports exact pixel dimensions with optional aspect ratio lock, or a percentage of each image's original size. It shows input and output dimensions and file sizes for every image.
 - Converter changes multiple JPG, PNG, or WebP images to a selected PNG, JPG, or WebP format, with individual and all downloads.
 - Image-to-PDF converter accepts multiple JPG, PNG, and WebP images; its thumbnails can be reordered, rotated, or removed before downloading one PDF. It supports A4, Letter, or image-sized pages, page orientation, and margins.
+- PDF editor opens one PDF locally, renders each page, and provides text replacement, image overlays, annotations, drawing, signatures, undo/redo, and page rotation, removal, or addition. The required rendering, editing, and Bengali-font files are committed locally under `lib/`.
 - QR generator encodes text or a URL as a PNG QR Code. It supports UTF-8 byte mode, error correction level L, versions 1–10, and up to 271 UTF-8 bytes. Its encoder and Reed–Solomon error correction are written in vanilla JavaScript.
 - Word counter updates live for Bengali and English text, showing words, grapheme characters with and without spaces, sentences, paragraphs, and reading time.
 

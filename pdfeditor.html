@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF এডিটর — ফ্রি ব্রাউজার-ভিত্তিক PDF সম্পাদনা</title>
+  <meta name="description" content="ব্রাউজারেই PDF-এর লেখা, ছবি, আঁকা ও পেজ সম্পাদনা করুন। কোনো আপলোড, অ্যাকাউন্ট বা বাহ্যিক সার্ভিস লাগে না।">
+  <meta name="theme-color" content="#146c52">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pdfeditor.css">
+  <script src="lib/regenerator-runtime.js"></script>
+  <script src="lib/pdf-lib.min.js"></script>
+  <script src="lib/fontkit.umd.min.js"></script>
+  <script type="module" src="pdfeditor.js"></script>
+</head>
+<body>
+  <header class="header wrap"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">▧</span> ছবি ছোট করুন<span class="brand-dot">.</span></a><nav class="header-nav" aria-label="টুল নির্বাচন"><a href="./">কমপ্রেসর</a><a href="resizer.html">রিসাইজার</a><a href="converter.html">কনভার্টার</a><a href="pdf.html">PDF বানান</a><a href="pdfeditor.html" aria-current="page">PDF এডিটর</a><a href="qr.html">QR কোড</a><a href="wordcount.html">শব্দ গণনা</a></nav></header>
+  <main class="wrap editor-main">
+    <div id="ad-top"></div>
+    <section class="editor-intro"><p class="eyebrow"><span></span> সম্পাদনা, আপনার ব্রাউজারে</p><h1>PDF ঠিক করুন,<br><span>নিজের মতো করে।</span></h1><p class="lead">লেখা বদলান, ছবি বসান, আঁকুন—তারপর নতুন PDF ডাউনলোড করুন।</p></section>
+    <section class="pdf-editor" aria-label="PDF এডিটর">
+      <div id="open-panel" class="open-panel">
+        <label class="drop-zone" id="pdf-drop-zone" for="pdf-input"><span class="upload-icon" aria-hidden="true">▧</span><strong>একটি PDF খুলুন</strong><span class="drop-sub">ক্লিক করুন বা PDF ফাইলটি এখানে ছেড়ে দিন</span><span class="choose-button">PDF নির্বাচন করুন <span aria-hidden="true">＋</span></span><span class="formats">শুধু PDF · সর্বোচ্চ আপনার ডিভাইসের ক্ষমতা অনুযায়ী</span><input id="pdf-input" type="file" accept="application/pdf,.pdf"></label>
+        <p id="open-message" class="editor-message" role="status" aria-live="polite"></p>
+      </div>
+      <div id="workspace" hidden>
+        <div class="editor-toolbar" aria-label="সম্পাদনার টুল">
+          <div class="toolbar-group"><span class="toolbar-label">নির্বাচন</span><button class="tool-button active" data-tool="select" type="button" title="আইটেম নির্বাচন, সরানো ও আকার বদলানো">↖<small>নির্বাচন</small></button><button class="tool-button" data-tool="edit-text" type="button" title="PDF-এর শনাক্ত করা লেখা নির্বাচন করুন">T<small>লেখা বদল</small></button><button class="tool-button" data-tool="add-text" type="button">T＋<small>লেখা যোগ</small></button></div>
+          <div class="toolbar-group"><span class="toolbar-label">ছবি</span><button class="tool-button" data-tool="replace-image" type="button">▧<small>ছবি বদল</small></button><button class="tool-button" data-tool="add-image" type="button">▧＋<small>ছবি যোগ</small></button><label class="tool-button image-picker" for="image-input" title="বসানোর জন্য ছবি বেছে নিন">⌑<small>ছবি বাছুন</small></label><input id="image-input" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" hidden></div>
+          <div class="toolbar-group"><span class="toolbar-label">মার্ক ও আঁকা</span><button class="tool-button" data-tool="draw" type="button">✎<small>আঁকুন</small></button><button class="tool-button" data-tool="rectangle" type="button">□<small>বক্স</small></button><button class="tool-button" data-tool="line" type="button">╱<small>লাইন</small></button><button class="tool-button" data-tool="arrow" type="button">→<small>তীর</small></button><button class="tool-button" data-tool="highlight" type="button">▰<small>হাইলাইট</small></button><button class="tool-button" data-tool="whiteout" type="button">▱<small>ঢাকুন</small></button><button class="tool-button" data-tool="signature" type="button">✒<small>স্বাক্ষর</small></button></div>
+          <div class="toolbar-group toolbar-end"><button id="undo-button" class="tool-button" type="button" disabled>↶<small>পূর্বাবস্থা</small></button><button id="redo-button" class="tool-button" type="button" disabled>↷<small>পুনরায়</small></button><button id="delete-item" class="tool-button danger" type="button" disabled>×<small>মুছুন</small></button><button id="download-pdf" class="primary" type="button">PDF ডাউনলোড ↓</button></div>
+        </div>
+        <div class="editor-help"><strong id="tool-name">নির্বাচন</strong><span id="tool-help">আইটেমে ট্যাপ বা ক্লিক করুন। টেনে সরান, কোণের হ্যান্ডল দিয়ে আকার বদলান।</span><span id="selected-image-name"></span></div>
+        <div id="editor-status" class="editor-message" role="status" aria-live="polite"></div>
+        <div id="pages" class="pages" aria-label="PDF পেজগুলো"></div>
+        <div class="page-add-row"><button id="add-page" class="secondary-button" type="button">＋ ফাঁকা পেজ যোগ করুন</button></div>
+      </div>
+      <div class="privacy"><span aria-hidden="true">◈</span><p><strong>আপনার PDF, আপনার কাছেই।</strong> ফাইলটি কোথাও আপলোড হয় না। রেন্ডার, সম্পাদনা ও সেভ সবই এই ব্রাউজারে হয়।</p></div>
+    </section>
+    <p class="editor-note"><strong>জানার বিষয়:</strong> নতুন বাংলা লেখার ফন্ট মূল PDF-এর ফন্টের থেকে ভিন্ন হতে পারে। স্ক্যান করা PDF-তে আসল লেখা শনাক্ত করা যায় না, তাই সেগুলোতে “লেখা বদল” টুল কাজ করবে না।</p>
+    <section class="how-to editor-howto"><p class="eyebrow">কীভাবে ব্যবহার করবেন</p><h2>চার ধাপে PDF সম্পাদনা</h2><div class="steps"><article><span>০১</span><h3>PDF খুলুন</h3><p>একটি PDF বাছুন। প্রতিটি পেজ নিচে স্ক্রল করে দেখা যাবে।</p></article><article><span>০২</span><h3>টুল বাছুন</h3><p>লেখা, ছবি বা আঁকার টুল বেছে পেজে ট্যাপ বা ড্র্যাগ করুন।</p></article><article><span>০৩</span><h3>গুছিয়ে নিন</h3><p>আইটেম নির্বাচন করে সরান, বড়-ছোট করুন বা মুছুন। পেজ ঘোরানো বা বাদও দিতে পারবেন।</p></article><article><span>০৪</span><h3>ডাউনলোড করুন</h3><p>সব পরিবর্তন এক PDF-তে নিয়ে ডাউনলোড করুন।</p></article></div></section>
+    <div id="ad-bottom"></div>
+  </main>
+  <footer class="wrap"><span class="brand">ছবি ছোট করুন.</span><p>কম সাইজ। সহজ শেয়ারিং। সবসময় ফ্রি।</p></footer>
+</body>
+</html>
